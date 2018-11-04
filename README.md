@@ -17,14 +17,21 @@ We use Liar dataset collected from PolitiFact.com and prepared by William Yang W
 # A list of internal milestones up until project milestone 2
 
 **04.11.2018:** Download the required dataset
+
 **10.11.2018:** Data wrangling and data preprocessing
+
 **14.11.2018:** Exploratory data analysis and revealing statistics
+
 **16.11.2018:** Scraping and analysis of external HTML part of the dataset
+
 **18.11.2018:** Decide on data visualization techniques
+
 **21.11.2018:** Visualizing our results
+
 **23.11.2018:** Setting a structured notebook to present descriptive analysis on the dataset.
+
 **25.11.2018:** Commenting and debugging our code
 
 # Questions for TAa
-- Do we present the answers to all research questions in Milestone 2 ?
-- Is the dataset we use small, do you suggest to get a bigger dataset ?
+- Do we present the answers to all research questions in Milestone 2?
+- Is the dataset we use small, do you suggest to get a bigger dataset?
