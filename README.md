@@ -12,10 +12,19 @@ Everybody lies at some point of time. However, if the liar is a popular and resp
 - Which political side lies more about specific subjects (i.e. abortion, climate change)?
 
 # Dataset
-List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
+We use Liar dataset collected from PolitiFact.com and prepared by William Yang Wang. The dataset is in tsv format, and also for each row, there is an HTML link column including some additional information about the specific statement. We will parse the dataset as well as the webpage to extract other informations such as statement date and place. The dataset contains train, test and validation sets amd has nearly 12k statements. We will combine them for analysis.
 
 # A list of internal milestones up until project milestone 2
-Add here a sketch of your planning for the next project milestone.
+
+**04.11.2018:** Download the required dataset
+**10.11.2018:** Data wrangling and data preprocessing
+**14.11.2018:** Exploratory data analysis and revealing statistics
+**16.11.2018:** Scraping and analysis of external HTML part of the dataset
+**18.11.2018:** Decide on data visualization techniques
+**21.11.2018:** Visualizing our results
+**23.11.2018:** Setting a structured notebook to present descriptive analysis on the dataset.
+**25.11.2018:** Commenting and debugging our code
 
 # Questions for TAa
-Add here some questions you have for us, in general or project-specific.
+- Do we present the answers to all research questions in Milestone 2 ?
+- Is the dataset we use small, do you suggest to get a bigger dataset ?
