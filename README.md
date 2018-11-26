@@ -93,3 +93,5 @@ Additionally, we used US Presidental Election results which we have downloaded f
 *14.12.2018:* Conclusion and Report
 
 *17/12/2018:* TBD: Poster & Presentation
+# NOTE TO TA
+In Q4, the folium map can be found in static folder. It can't be seen on jupyter notebook. 
