@@ -67,6 +67,8 @@ Additionally, we used US Presidental Election results which we have downloaded f
 - As future work, we are going to analyze the effects of the lies about specific subjects on referendums about those subjects?
 
 - a Trump Lie Count for each season.
+
+- **NEW** Visualization of the truth ratios of the statements made by famous politicians.
     
 # A list of internal milestones up until project milestone 3
 
