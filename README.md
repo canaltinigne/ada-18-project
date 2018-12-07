@@ -71,6 +71,8 @@ Additionally, we used US Presidental Election results which we have downloaded f
 - [X] Visualization of the truth ratios of the statements made by famous politicians.
 
 - [ ] Quarrel Network
+
+- [ ] Sentiment Analysis on statements
     
 # A list of internal milestones up until project milestone 3
 
