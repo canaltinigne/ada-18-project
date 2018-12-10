@@ -70,7 +70,7 @@ Additionally, we used US Presidental Election results which we have downloaded f
 
 - [X] Visualization of the truth ratios of the statements made by famous politicians.
 
-- [ ] Quarrel Network
+- [X] Quarrel Network
 
 - [ ] Sentiment Analysis on statements
     
@@ -94,10 +94,6 @@ Additionally, we used US Presidental Election results which we have downloaded f
 
 *01.12.2018:* Creating more complex research question.
 
-*10.12.2018:* Completing missing research questions and newly added questions.
+*12.12.2018:* Completing missing research questions and newly added questions.
 
-*14.12.2018:* Conclusion and Report
-
-*17/12/2018:* TBD: Poster & Presentation
-# NOTE TO TA
-In Q4, the folium map can be found in static folder. It can't be seen on jupyter notebook. 
+*16.12.2018:* Completing data story 
