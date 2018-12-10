@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Quarrel Network | Liar Dataset</title>
+
+    <style type="text/css">
+        body {
+            font: 10pt arial;
+        }
+
+        #mynetwork {
+            width: 800px;
+            height: 800px;
+            border: 1px solid lightgray;
+        }
+    </style>
+
+    <script type="text/javascript" src="vis.js"></script>
+    <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        var DIR = 'images/';
+
+        var nodes = null;
+        var edges = null;
+        var network = null;
+
+        // Called when the Visualization API is loaded.
+        function draw() {
+            // create people.
+            // value corresponds with the age of the person
+            //var DIR = '../img/indonesia/';
+
+            nodes = [{
+                    id: 1,
+                    shape: 'circularImage',
+                    label: "Donald Trump",
+                    image: './images/trump.jpg'
+                },
+                {
+                    id: 2,
+                    shape: 'circularImage',
+                    label: "Barack Obama",
+                    image: './images/obama.jpg'
+                },
+                {
+                    id: 3,
+                    shape: 'circularImage',
+                    label: "Scott Walker",
+                    image: './images/walker.jpg'
+                },
+                {
+                    id: 4,
+                    shape: 'circularImage',
+                    label: "Mitt Romney",
+                    image: './images/romney.jpg'
+                },
+                {
+                    id: 5,
+                    shape: 'circularImage',
+                    label: "Rick Perry",
+                    image: './images/perry.jpg'
+                },
+                {
+                    id: 6,
+                    shape: 'circularImage',
+                    label: "John McCain",
+                    image: './images/mccain.jpg'
+                },
+                {
+                    id: 7,
+                    shape: 'circularImage',
+                    label: "Ted Cruz",
+                    image: './images/cruz.jpg'
+                },
+                {
+                    id: 8,
+                    shape: 'circularImage',
+                    label: "Hillary Clinton",
+                    image: './images/clinton.jpg'
+                },
+                {
+                    id: 9,
+                    shape: 'circularImage',
+                    label: "Michele Bachmann",
+                    image: './images/bachmann.jpg'
+                },
+                {
+                    id: 10,
+                    shape: 'circularImage',
+                    label: "Rick Scott",
+                    image: './images/scott.jpg'
+                },
+                {
+                    id: 11,
+                    shape: 'circularImage',
+                    label: "Marco Rubio",
+                    image: './images/rubio.jpg'
+                },
+                {
+                    id: 12,
+                    shape: 'circularImage',
+                    label: "Newt Gingrich",
+                    image: './images/gingrich.jpg'
+                },
+                {
+                    id: 13,
+                    shape: 'circularImage',
+                    label: "Sarah Palin",
+                    image: './images/palin.jpg'
+                },
+                {
+                    id: 14,
+                    shape: 'circularImage',
+                    label: "Chris Christie",
+                    image: './images/christie.jpg'
+                },
+                {
+                    id: 15,
+                    shape: 'circularImage',
+                    label: "John Boehner",
+                    image: './images/boehner.jpg'
+                },
+                {
+                    id: 16,
+                    shape: 'circularImage',
+                    label: "Rick Santorum",
+                    image: './images/santorum.jpg'
+                },
+                {
+                    id: 17,
+                    shape: 'circularImage',
+                    label: "Rush Limbaugh",
+                    image: './images/limbaugh.jpg'
+                },
+            ];
+
+            // create connections between people
+            // value corresponds with the amount of contact between two people
+            edges = [{
+                    "from": 1,
+                    "to": 2,
+                    "width": 10
+                },
+                {
+                    "from": 1,
+                    "to": 4,
+                    "width": 1
+                },
+                {
+                    "from": 1,
+                    "to": 6,
+                    "width": 1
+                },
+                {
+                    "from": 1,
+                    "to": 7,
+                    "width": 3
+                },
+                {
+                    "from": 1,
+                    "to": 8,
+                    "width": 25
+                },
+                {
+                    "from": 1,
+                    "to": 11,
+                    "width": 2
+                },
+                {
+                    "from": 2,
+                    "to": 1,
+                    "width": 1
+                },
+                {
+                    "from": 2,
+                    "to": 4,
+                    "width": 5
+                },
+                {
+                    "from": 2,
+                    "to": 6,
+                    "width": 6
+                },
+                {
+                    "from": 2,
+                    "to": 8,
+                    "width": 1
+                },
+                {
+                    "from": 2,
+                    "to": 12,
+                    "width": 1
+                },
+                {
+                    "from": 3,
+                    "to": 2,
+                    "width": 2
+                },
+                {
+                    "from": 3,
+                    "to": 4,
+                    "width": 1
+                },
+                {
+                    "from": 4,
+                    "to": 2,
+                    "width": 15
+                },
+                {
+                    "from": 5,
+                    "to": 2,
+                    "width": 5
+                },
+                {
+                    "from": 6,
+                    "to": 2,
+                    "width": 17
+                },
+                {
+                    "from": 6,
+                    "to": 13,
+                    "width": 3
+                },
+                {
+                    "from": 7,
+                    "to": 1,
+                    "width": 2
+                },
+                {
+                    "from": 7,
+                    "to": 2,
+                    "width": 9
+                },
+                {
+                    "from": 7,
+                    "to": 8,
+                    "width": 2
+                },
+                {
+                    "from": 8,
+                    "to": 1,
+                    "width": 3
+                },
+                {
+                    "from": 8,
+                    "to": 2,
+                    "width": 3
+                },
+                {
+                    "from": 8,
+                    "to": 3,
+                    "width": 1
+                },
+                {
+                    "from": 8,
+                    "to": 6,
+                    "width": 1
+                },
+                {
+                    "from": 8,
+                    "to": 10,
+                    "width": 1
+                },
+                {
+                    "from": 9,
+                    "to": 2,
+                    "width": 4
+                },
+                {
+                    "from": 9,
+                    "to": 12,
+                    "width": 1
+                },
+                {
+                    "from": 10,
+                    "to": 8,
+                    "width": 1
+                },
+                {
+                    "from": 11,
+                    "to": 2,
+                    "width": 3
+                },
+                {
+                    "from": 11,
+                    "to": 7,
+                    "width": 1
+                },
+                {
+                    "from": 11,
+                    "to": 8,
+                    "width": 1
+                },
+                {
+                    "from": 12,
+                    "to": 2,
+                    "width": 4
+                },
+                {
+                    "from": 12,
+                    "to": 13,
+                    "width": 1
+                },
+                {
+                    "from": 13,
+                    "to": 2,
+                    "width": 3
+                },
+                {
+                    "from": 13,
+                    "to": 6,
+                    "width": 1
+                },
+                {
+                    "from": 14,
+                    "to": 2,
+                    "width": 1
+                },
+                {
+                    "from": 15,
+                    "to": 2,
+                    "width": 3
+                },
+                {
+                    "from": 16,
+                    "to": 2,
+                    "width": 4
+                },
+                {
+                    "from": 16,
+                    "to": 4,
+                    "width": 1
+                },
+                {
+                    "from": 16,
+                    "to": 5,
+                    "width": 1
+                },
+                {
+                    "from": 17,
+                    "to": 2,
+                    "width": 3
+                },
+                {
+                    "from": 17,
+                    "to": 3,
+                    "width": 1
+                },
+                {
+                    "from": 17,
+                    "to": 10,
+                    "width": 1
+                }
+            ];
+
+            edges.forEach(element => {
+                element['width'] /= 3;
+                element['arrows'] = 'to';
+            });
+
+            // create a network
+            var container = document.getElementById('mynetwork');
+
+            var options = {
+                interaction: {
+                    selectConnectedEdges: false,
+                    hoverConnectedEdges: false
+                },
+                nodes: {
+                    borderWidth: 3,
+                    size: 25,
+                    color: {
+                        border: '#222222',
+                        background: '#666666'
+                    },
+                    font: {
+                        color: 'black',
+                        size: 15
+                    }
+                },
+                layout: {
+                    randomSeed: 23
+                },
+                physics: {
+                    barnesHut: {
+                        springLength: 400
+                    }
+                }
+            };
+
+            var data = {
+                nodes: nodes,
+                edges: edges
+            };
+
+            network = new vis.Network(container, data, options);
+
+            network.on("selectNode", function (params) {
+
+                var selectedNodeId = params.nodes[0];
+                
+                var node = network.body.nodes[selectedNodeId];
+                
+                for (var key in network.body.edges) {
+                    if(network.body.edges[key].fromId == node.id){
+
+                        network.body.edges[key].setOptions({
+                            color: {
+                                color: 'red'
+                            }
+                        });
+                    }
+                }
+                
+                node.setOptions({
+                    font: {
+                        size: 20,
+                        color: 'black',
+                        background: 'orange'
+                    }
+                });
+            });
+
+            network.on("deselectNode", function (params) {
+                var deselectedNodeId = params.previousSelection.nodes[0];
+                var node = network.body.nodes[deselectedNodeId];
+                
+                node.setOptions({
+                    font: {
+                        size: options.nodes.font.size,
+                        color: options.nodes.font.color,
+                        background: options.nodes.font.background
+                    }
+                });
+
+                for (var key in network.body.edges) {
+                    if(network.body.edges[key].fromId == node.id){
+
+                        network.body.edges[key].setOptions({
+                            color: {
+                                color: 'black'
+                            }
+                        });
+                    }
+                }
+
+            });
+        }
+
+    </script>
+
+</head>
+
+<body onload="draw()">
+
+    <div id="mynetwork"></div>
+</body>
+
+</html>
