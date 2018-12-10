@@ -62,9 +62,7 @@ Additionally, we used US Presidental Election results which we have downloaded f
     
 # Plan to do in milestone 3
 
-- Completing the analysis of Question 3 (What are the most frequent words that used in lies relating to specific subjects ?)
-
-- As future work, we are going to analyze the effects of the lies about specific subjects on referendums about those subjects?
+- [X] Completing the analysis of Question 3 (What are the most frequent words that used in lies relating to specific subjects ?)
 
 - [X] Donald Trump's lies during the campaign
 
