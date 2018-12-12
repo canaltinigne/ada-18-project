@@ -9,8 +9,8 @@
             font: 10pt arial;
         }
 
-        #mynetwork {
-            width: 800px;
+        #network {
+            width: 900px;
             height: 800px;
             border: 1px solid lightgray;
         }
@@ -20,125 +20,131 @@
     <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript">
-        var DIR = 'images/';
 
-        var nodes = null;
-        var edges = null;
-        var network = null;
+        function graph() {
 
-        // Called when the Visualization API is loaded.
-        function draw() {
-            // create people.
-            // value corresponds with the age of the person
-            //var DIR = '../img/indonesia/';
-
-            nodes = [{
+            var nodes = [{
                     id: 1,
                     shape: 'circularImage',
                     label: "Donald Trump",
-                    image: './images/trump.jpg'
+                    image: './images/trump.jpg',
+                    title: 'The 45th and current President of the United States. <br>Before entering politics, he was a businessman and television personality.'
                 },
                 {
                     id: 2,
                     shape: 'circularImage',
                     label: "Barack Obama",
-                    image: './images/obama.jpg'
+                    image: './images/obama.jpg',
+                    title: 'an American attorney and politician who served as the 44th President of the United States.'
                 },
                 {
                     id: 3,
                     shape: 'circularImage',
                     label: "Scott Walker",
-                    image: './images/walker.jpg'
+                    image: './images/walker.jpg',
+                    title: 'The 45th and current governor of Wisconsin.'
                 },
                 {
                     id: 4,
                     shape: 'circularImage',
                     label: "Mitt Romney",
-                    image: './images/romney.jpg'
+                    image: './images/romney.jpg',
+                    title: 'an American politician and businessman who is the United States Senator-elect from Utah.'
                 },
                 {
                     id: 5,
                     shape: 'circularImage',
                     label: "Rick Perry",
-                    image: './images/perry.jpg'
+                    image: './images/perry.jpg',
+                    title: 'an American politician who is the 14th and current United States Secretary of Energy.'
                 },
                 {
                     id: 6,
                     shape: 'circularImage',
                     label: "John McCain",
-                    image: './images/mccain.jpg'
+                    image: './images/mccain.jpg',
+                    title: 'an American politician and military officer who served as a United States Senator from Arizona.'
                 },
                 {
                     id: 7,
                     shape: 'circularImage',
                     label: "Ted Cruz",
-                    image: './images/cruz.jpg'
+                    image: './images/cruz.jpg',
+                    title: 'an American politician and attorney serving as the junior United States Senator from Texas.'
                 },
                 {
                     id: 8,
                     shape: 'circularImage',
                     label: "Hillary Clinton",
-                    image: './images/clinton.jpg'
+                    image: './images/clinton.jpg',
+                    title: 'an American politician, diplomat, lawyer, writer, and public speaker.'
                 },
                 {
                     id: 9,
                     shape: 'circularImage',
                     label: "Michele Bachmann",
-                    image: './images/bachmann.jpg'
+                    image: './images/bachmann.jpg',
+                    title: 'Member of the U.S. House of Representatives from Minnesota'
                 },
                 {
                     id: 10,
                     shape: 'circularImage',
                     label: "Rick Scott",
-                    image: './images/scott.jpg'
+                    image: './images/scott.jpg',
+                    title: 'The 45th and current Governor of Florida.'
                 },
                 {
                     id: 11,
                     shape: 'circularImage',
                     label: "Marco Rubio",
-                    image: './images/rubio.jpg'
+                    image: './images/rubio.jpg',
+                    title: 'an American politician, attorney, and the junior United States Senator for the State of Florida.'
                 },
                 {
                     id: 12,
                     shape: 'circularImage',
                     label: "Newt Gingrich",
-                    image: './images/gingrich.jpg'
+                    image: './images/gingrich.jpg',
+                    title: 'The 50th Speaker of the United States House of Representatives.'
                 },
                 {
                     id: 13,
                     shape: 'circularImage',
                     label: "Sarah Palin",
-                    image: './images/palin.jpg'
+                    image: './images/palin.jpg',
+                    title: 'The 9th governor of Alaska.'
                 },
                 {
                     id: 14,
                     shape: 'circularImage',
                     label: "Chris Christie",
-                    image: './images/christie.jpg'
+                    image: './images/christie.jpg',
+                    title: 'The 55th Governor of New Jersey.'
                 },
                 {
                     id: 15,
                     shape: 'circularImage',
                     label: "John Boehner",
-                    image: './images/boehner.jpg'
+                    image: './images/boehner.jpg',
+                    title: 'The 53rd Speaker of the United States House of Representatives.'
                 },
                 {
                     id: 16,
                     shape: 'circularImage',
                     label: "Rick Santorum",
-                    image: './images/santorum.jpg'
+                    image: './images/santorum.jpg',
+                    title: 'a United States Senator from Pennsylvania.'
                 },
                 {
                     id: 17,
                     shape: 'circularImage',
                     label: "Rush Limbaugh",
-                    image: './images/limbaugh.jpg'
+                    image: './images/limbaugh.jpg',
+                    title: 'an American radio talk show host and conservative political commentator.'
                 },
             ];
 
-            // create connections between people
-            // value corresponds with the amount of contact between two people
-            edges = [{
+            var edges = [{
                     "from": 1,
                     "to": 2,
                     "width": 10
@@ -356,12 +362,12 @@
             ];
 
             edges.forEach(element => {
-                element['width'] /= 3;
+                element['width'] /= 2.5;
                 element['arrows'] = 'to';
             });
 
             // create a network
-            var container = document.getElementById('mynetwork');
+            var container = document.getElementById('network');
 
             var options = {
                 interaction: {
@@ -395,7 +401,7 @@
                 edges: edges
             };
 
-            network = new vis.Network(container, data, options);
+            var network = new vis.Network(container, data, options);
 
             network.on("selectNode", function (params) {
 
@@ -416,9 +422,9 @@
                 
                 node.setOptions({
                     font: {
-                        size: 20,
+                        size: 25,
                         color: 'black',
-                        background: 'orange'
+                        strokeWidth: 5
                     }
                 });
             });
@@ -431,7 +437,8 @@
                     font: {
                         size: options.nodes.font.size,
                         color: options.nodes.font.color,
-                        background: options.nodes.font.background
+                        background: options.nodes.font.background,
+                        strokeWidth: options.nodes.font.strokeWidth
                     }
                 });
 
@@ -453,9 +460,9 @@
 
 </head>
 
-<body onload="draw()">
+<body onload="graph()">
 
-    <div id="mynetwork"></div>
+    <div id="network"></div>
 </body>
 
 </html>
