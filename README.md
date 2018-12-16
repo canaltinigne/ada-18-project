@@ -4,6 +4,8 @@ This course project is developed by Can Yilmaz Altinigne, Günes Yurdakul and Be
 
 Data Story link: https://heybeliada.github.io
 
+Data Story repository: https://github.com/heybeliada/heybeliada.github.io
+
 ATTENTION: Map and network may not be seen in Jupyter Notebook. They are visible in Data Story. Also you can find them in static/map.html and network.html
 
 Final notebook can be found in Milestone_3.ipynb
@@ -89,6 +91,8 @@ Can: Creating network and map visualizations, creating the structure of project 
 Günes: Data preparation, creating the lie classifier, conducting the research on effects of false statements on election results.
 
 Bengisu: Data preparation, creating dataframe queries and categorization functions, answering several research questions.
+
+Günes Yurdakul will be our main presenter during poster presentation.
 
 # A list of internal milestones up until project milestone 3
 
