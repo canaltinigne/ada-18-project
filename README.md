@@ -1,8 +1,12 @@
-The README in milestone 3 shall be updated detailing the contributions of all group members (including who will work on the final presentation).
+1) The README in milestone 3 shall be updated detailing the contributions of all group members (including who will work on the final presentation).
 
 Example
 
 John: Plotting graphs during data analysis, crawling the data, preliminary data analysis; Mary: Problem formulation, writing up the report, coming up with the algorithm; Chris: Coding up the algorithm, running tests, tabulating final results.
+
+2) Research Questionları güncelle
+
+3) Update in Milestone 3 kısmını ekle
 
 # Analysis and Impacts of Fake News
 
