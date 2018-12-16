@@ -1,3 +1,5 @@
+0) Kişilerin adları en başa
+
 1) The README in milestone 3 shall be updated detailing the contributions of all group members (including who will work on the final presentation).
 
 Example
