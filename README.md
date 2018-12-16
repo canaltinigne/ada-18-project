@@ -1,18 +1,10 @@
-0) Kişilerin adları en başa
-
-1) The README in milestone 3 shall be updated detailing the contributions of all group members (including who will work on the final presentation).
-
-Example
-
-John: Plotting graphs during data analysis, crawling the data, preliminary data analysis; Mary: Problem formulation, writing up the report, coming up with the algorithm; Chris: Coding up the algorithm, running tests, tabulating final results.
-
-2) Research Questionları güncelle
-
-3) Update in Milestone 3 kısmını ekle
-
 # Analysis and Impacts of Fake News
 
+This course project is developed by Can Yilmaz Altinigne, Günes Yurdakul and Bengisu Güresti.
+
 Data Story link: https://heybeliada.github.io
+
+ATTENTION: Map and network may not be seen in Jupyter Notebook. They are visible in Data Story. Also you can find them in static/map.html and network.html
 
 # Abstract
 Everybody lies at some point of time. However, if the liar is a popular and respected source or figure in society, this may have crucial effects on people. The goal of this project is to analyze the distribution of lies among the political figures and news sources in the U.S. and the effects of these lies on voters and social media. We use Liar dataset collected from PolitiFact.com and prepared by William Yang Wang. We aim to specify the topics which politicians and news sources mostly lie about. Also, we intend to reveal if the lies told by politicians propagate to other news sources. We would like to emphasize the power of the statements made by notable sources in society. Because, we believe that the manipulation of people's decisions through fake news may have drastic effects on society and democracy in a country. As we are all from Turkey, we are the witnesses of how biased media manipulates the people's political views which determine the future of the country.  
@@ -22,14 +14,20 @@ Everybody lies at some point of time. However, if the liar is a popular and resp
 1. What are the subjects that the politicians and news sources mostly lie about?
 2. What are the most frequent words used in lies?
 3. What are the most frequent words used in lies relating to specific subjects ?
-4. What is the number of lies told in each state ?
+4. What is the total number of lies told by each state representers ?
 5. Do republicans and democrats tell lies more in the states that they won or they lost ?
+6. Visualization of the truth ratios of the statements made by famous politicians.
+7. Trump's False Statements during 2016 Elections Campaign
+8. Quarrel Network
+9. Creating a lie classifier using Logistic Regression, SVM and LSTM models.
 
 # Dataset
 We use Liar dataset collected from PolitiFact.com and prepared by William Yang Wang. The dataset is in tsv format, and also for each row, there is an HTML link column including some additional information about the specific statement. We will parse the dataset as well as the webpage to extract other informations such as statement date and place. The dataset contains train, test and validation sets amd has nearly 12k statements. We will combine them for analysis.
 
-Liar Dataset Structure:
-Id
+## Liar Dataset Structure:
+
+- Id
+
 - Label
 
 - Statement
@@ -74,18 +72,22 @@ Additionally, we used US Presidental Election results which we have downloaded f
     - In Q4, we found the count of lies which have been told in each state. We visualized the results in bar chart and a `Folium` map.
     - In Q5, we compare the means of lie counts samples for Republicans' and Democrats' in the states that they win and lose before 2012 election and 2016 election in order to determine if republicans and democrats tell lies more in the states that they won or they lost.
     
-# Plan to do in milestone 3
+# Update in Milestone 3
 
-- [X] Completing the analysis of Question 3 (What are the most frequent words that used in lies relating to specific subjects ?)
+    - We completed the analysis of Question 3 (What are the most frequent words that used in lies relating to specific subjects ?)
+    - We added the plot of number of Trump's false statements from his candidacy decleration to the election date
+    - We visualized the authenticity percentage of the statements made by Barack Obama, Hillary Clinton and Donald Trump.
+    - We added a quarrel network which shows lie connection between politicians.
+    - We created a lie classifier using several classification models and deep learning models.
 
-- [X] Donald Trump's lies during the campaign
+# Contribution
 
-- [X] Visualization of the truth ratios of the statements made by famous politicians.
+Can: Creating network and map visualizations, creating the structure of project webpage, answering several research questions.
 
-- [X] Quarrel Network
+Günes: Data preparation, creating the lie classifier, conducting the research on effects of false statements on election results.
 
-- [ ] Sentiment Analysis on statements
-    
+Bengisu: Data preparation, creating dataframe queries and categorization functions, answering several research questions.
+
 # A list of internal milestones up until project milestone 3
 
 *04.11.2018:* Download the required dataset
